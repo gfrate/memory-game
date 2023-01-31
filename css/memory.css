@@ -1,0 +1,103 @@
+body {
+   background-color: rgb(37, 44, 160);
+   font-family: Arial, sans-serif;
+}
+
+#game {
+   display: flex;
+   flex-flow: column;
+   align-items: center;
+   justify-content: center;
+}
+
+.text {
+   margin: 10px 0;
+   color: white;
+}
+
+.logo {
+   width: 100px;
+   height: 100px;
+   background-color: #fff;
+}
+
+#field {
+   display: flex;
+   justify-content: center;
+   flex-wrap: wrap;
+}
+
+.card {
+   background-color: transparent;
+   width: 200px;
+   height: 200px;
+   perspective: 1000px;
+   margin: 10px;
+}
+
+.card-inner {
+   position: relative;
+   width: 100%;
+   height: 100%;
+   text-align: center;
+   transition: transform 0.8s;
+   transform-style: preserve-3d;
+}
+
+.mostra .card-inner {
+   transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   -webkit-backface-visibility: hidden;
+   backface-visibility: hidden;
+   background-color: #fff;
+   color: black;
+}
+
+.card-back {
+   transform: rotateY(180deg);
+}
+
+.testo {
+   font-size: 128px;
+}
+
+#rigioca {
+   display: none;
+   padding: 10px;
+   border-radius: 2.5px;
+   border: 1px solid rgb(37, 44, 160);
+   background-color: whitesmoke;
+   color: rgb(37, 44, 160);
+}
+
+#rigioca:hover {
+   border: 1px solid whitesmoke;
+   background-color: rgb(37, 44, 160);
+   color: whitesmoke;
+}
+
+/* Tablet */
+@media only screen and (max-width: 600px) {
+   .card {
+      width: 100px;
+      height: 100px;
+   }
+
+   .logo {
+      width: 50px;
+      height: 50px;
+   }
+
+   .testo {
+      font-size: 64px;
+   }
+}
